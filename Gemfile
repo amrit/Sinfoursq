@@ -8,7 +8,7 @@ gem 'omniauth-foursquare'
 gem 'foursquare2'
 gem "typhoeus"
 gem "quimby"
-
+gem 'simple_form'
 
 # gem 'omniauth-att', :path => File.expand_path("./../../omniauth-att", __FILE__)
 

@@ -5,7 +5,7 @@ require 'omniauth'
 require 'omniauth-foursquare'
 require 'foursquare2'
 require 'quimby'
-require 'haml'
+
 require 'sinatra/reloader'
 
 require 'net/https'
@@ -34,7 +34,8 @@ class SinatraApp < Sinatra::Base
   end
   
   get '/' do
-    erb :login
+    #erb :login
+    erb "<h1> Hello </h1>"
   end
   
   get '/auth/:provider/callback' do

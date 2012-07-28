@@ -6,10 +6,10 @@ require 'omniauth-foursquare'
 require 'foursquare2'
 require 'quimby'
 
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 
 require 'net/https'
-require 'sinatra_more/markup_plugin'
+#require 'sinatra_more/markup_plugin'
 
 #<pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>
 #TODO require 'omniauth-att'
@@ -21,9 +21,7 @@ class SinatraApp < Sinatra::Base
     set :public_folder, Proc.new { File.join(root, "public") }
   end
   
-  configure :development do 
-    register Sinatra::Reloader
-  end
+ 
   use OmniAuth::Builder do
     
     provider :foursquare, 'FQ4UOTLCSL1IU3RX3GLM3E10RDZK2EFB0I1K5BO3ZX1EAUNM','5EVMUNNAQDZDKORGOSTPPESDHZWX0ZUTLMPSXYGXYCUFCSGE',

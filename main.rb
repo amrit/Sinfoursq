@@ -32,8 +32,8 @@ class SinatraApp < Sinatra::Base
   end
   
   get '/' do
-    #erb :login
-    erb "<h1> Hello </h1>"
+    erb :login
+    
   end
   
   get '/auth/:provider/callback' do
@@ -125,7 +125,23 @@ SinatraApp.run! if __FILE__ == $0
 
 __END__
 
-
+@@ layout
+<html>
+  <head>
+  <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<script src="/js/bootstrap-ddown.js" type="text/javascript"/>
+	<title> MCFQ </title>
+  </head>
+  <body>
+    
+      <div class='content'>
+        <%= yield %>
+      </div>
+    
+  </body>
+</html>
 
 
 
